@@ -1,0 +1,44 @@
+:root{color-scheme:dark;--bg:#101513;--surface:#181f1b;--line:#3b4b41;--text:#f3f5ee;--muted:#becabf;--accent:#c9f370}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:1rem/1.6 'Malgun Gothic','Apple SD Gothic Neo',system-ui,sans-serif;word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--accent);text-underline-offset:.22em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.skip{position:absolute;left:1rem;top:.5rem;background:var(--bg);padding:.5rem;transform:translateY(-160%)}
+.skip:focus{transform:none}
+.wrap{width:min(100% - 4rem,81rem);margin-inline:auto}
+.bar{border-bottom:1px solid var(--line)}
+.nav{min-height:4rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.nav a{text-decoration:none}
+.brand{font-weight:800;color:var(--text)}
+nav{display:flex;gap:1.5rem}
+nav a{color:var(--muted)}
+.hero{display:grid;grid-template-columns:.95fr 1.05fr;gap:3rem;align-items:center;padding-block:2.4rem 2.1rem}
+h1,h2,h3,p,figure{margin:0}
+h1{font-size:clamp(3rem,5vw,5.1rem);line-height:1.03;letter-spacing:-.07em}
+.roman{margin-top:.55rem;color:var(--accent);font-size:.9rem;letter-spacing:.15em;font-weight:700}
+.lead{margin-top:1.05rem;font-size:clamp(1.5rem,2.5vw,2.5rem);font-weight:750;line-height:1.25;letter-spacing:-.045em}
+.intro{margin-top:.85rem;color:var(--muted)}
+.feature,.card{background:var(--surface);border:1px solid var(--line);border-radius:.9rem}
+.feature{padding:1rem}
+.feature-head,.meta{display:flex;align-items:center;justify-content:space-between;gap:.65rem;flex-wrap:wrap}
+.feature-head{font-weight:700;margin-bottom:.65rem}
+.tag{font:700 .9rem/1.4 system-ui;color:var(--accent)}
+img{display:block;width:100%;height:auto;border-radius:.4rem}
+.feature img{aspect-ratio:717 / 329;object-fit:contain;background:#f8f8f8}
+figcaption{color:var(--muted);font-size:.875rem;margin-block:.55rem}
+.feature a{display:inline-block;font-size:.9rem;font-weight:700}
+h2{font-size:1.55rem;letter-spacing:-.04em;margin-bottom:.65rem}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
+.card{padding:1.05rem 1.2rem}
+.meta{color:var(--accent);font-size:.875rem;font-weight:700}
+.meta span+span{color:var(--muted);font-weight:400}
+h3{font-size:1.32rem;line-height:1.35;margin-block:.38rem .5rem;letter-spacing:-.035em}
+.card p,.contact p,dd{color:var(--muted)}
+details{border-top:1px solid var(--line);margin-top:.65rem;padding-top:.58rem}
+summary{color:var(--accent);font-weight:700;cursor:pointer;padding-block:.2rem}
+dl{margin:.7rem 0}
+dt{font-weight:700;margin-top:.7rem}
+dd{margin:0}
+.contact{margin-top:2.2rem;padding-block:1.5rem 2rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.error img{max-width:499px}
+@media(max-width:850px){.wrap{width:min(100% - 2rem,40rem)}.hero,.cards{grid-template-columns:1fr;gap:1rem}.hero{padding-block:2rem 1.5rem}.wide{display:none}}

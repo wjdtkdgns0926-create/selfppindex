@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="정상훈의 게임 기획과 AI 자동화 프로젝트 포트폴리오">
+<title>정상훈 | 게임 기획과 AI 자동화</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="bar">
+<div class="wrap nav">
+<a class="brand" href="#main">정상훈</a>
+<nav aria-label="주 메뉴"><a href="#projects">프로젝트</a><a href="#contact">연락처</a></nav>
+</div>
+</header>
+<main id="main" class="wrap" tabindex="-1">
+<section class="hero" aria-labelledby="name">
+<div>
+<h1 id="name">정상훈</h1>
+<p class="roman"><span lang="en">CHOUNG SANGHOON</span></p>
+<p class="lead">게임을 기획하고,<br> AI로 반복 작업을 줄이는<br class="wide"> 도구를 만듭니다.</p>
+<p class="intro">아이디어를 플레이할 수 있는 게임과 실제로 동작하는 자동화로 옮깁니다.</p>
+</div>
+<figure class="feature">
+<div class="feature-head"><span>J-POP 일본어 학습 자동화</span><span class="tag">n8n</span></div>
+<img src="workflow.webp" width="717" height="329" alt="챗봇 입력이 AI 에이전트로 전달되고, 출력을 합친 뒤 노션 페이지를 만드는 n8n 노드 화면">
+<figcaption>실제 시연 화면 · AI 결과를 모아 노션 페이지 생성 단계로 전달하는 흐름</figcaption>
+<a href="#automation">자동화 프로젝트 보기</a>
+</figure>
+</section>
+<section id="projects" aria-labelledby="work">
+<h2 id="work">프로젝트</h2>
+<div class="cards">
+<article class="card" id="game">
+<div class="meta"><span>게임 기획</span><span>5인 팀 · PowerPoint</span></div>
+<h3>마우스 조작 게임의 동료 시스템</h3>
+<p>게임 기획 대부분을 맡아 동료 구매·강화 기능을 설계했습니다. 10스테이지 이후에는 동료만으로 클리어가 가능해져 핵심 조작이 약해졌습니다.</p>
+<details>
+<summary>기획과 플레이 결과 보기</summary>
+<dl>
+<dt>상황</dt><dd>부트캠프에서 5인 팀으로 마우스 조작 게임을 만들었습니다. 참고작의 후반부가 반복적이고 난이도가 가파르게 오른다고 느꼈습니다.</dd>
+<dt>행동</dt><dd>PowerPoint로 프로토타입을 만들고, 후반에 대응할 수단으로 동료 구매·강화를 기획했습니다. 팀은 이 기능을 최종 결과물에 반영했습니다.</dd>
+<dt>결과</dt><dd>10스테이지를 넘기면 동료가 적을 대부분 자동으로 처치했습니다. 마우스를 움직이지 않아도 스테이지를 클리어할 수 있었고, 부트캠프는 밸런스를 조정하기 전에 종료됐습니다.</dd>
+<dt>다시 만든다면</dt><dd>동료 시스템을 빼고 마우스 조작을 유지하겠습니다. 스테이지가 진행되며 이야기가 전개되고, 최종 스테이지를 클리어하면 엔딩에 도달하도록 설계하겠습니다.</dd>
+</dl>
+</details>
+</article>
+<article class="card" id="automation">
+<div class="meta"><span>AI 자동화</span><span>n8n · Notion · Python</span></div>
+<h3>J-POP 일본어 학습 자료 자동화</h3>
+<p>챗봇에 가사를 입력하면 원문, 한국어 번역, 단어장을 모아 노션에 정리하는 워크플로를 만들었습니다.</p>
+<details>
+<summary>AI 에이전트의 역할을 나눈 과정</summary>
+<dl>
+<dt>상황</dt><dd>한 에이전트에 여러 출력을 맡겼을 때 요청과 다른 결과가 반복됐습니다.</dd>
+<dt>행동</dt><dd>학습 자료 생성 작업을 역할별 에이전트로 나누고, 출력을 합치는 흐름을 n8n으로 구성했습니다.</dd>
+<dt>결과</dt><dd>가사 한 번 입력으로 원문·한국어 번역·단어장을 함께 준비하는 흐름을 만들었습니다.</dd>
+</dl>
+</details>
+<details>
+<summary>긴 자료의 노션 등록 문제를 해결한 과정</summary>
+<dl>
+<dt>상황</dt><dd>녹화 당시 노션 등록 단계에서 텍스트가 2,000자를 초과해 페이지 생성 요청이 거부됐습니다.</dd>
+<dt>행동</dt><dd>이후 Python으로 출력물을 작은 단위로 나눠 순서대로 기록하도록 수정했습니다.</dd>
+<dt>결과</dt><dd>긴 자료도 나눠 등록할 수 있게 했습니다. 아래 녹화 캡처는 수정 전 오류를 보여 줍니다.</dd>
+</dl>
+<figure class="error"><img src="notion-limit.webp" width="499" height="64" alt="노션 페이지 생성 실패. 텍스트 길이는 2,000자 이하여야 하나 입력은 2,393자였습니다."><figcaption>실제 시연 화면 · 노션 텍스트 길이 검사 오류</figcaption></figure>
+</details>
+</article>
+</div>
+</section>
+<section id="contact" class="contact" aria-labelledby="contact-title">
+<div><h2 id="contact-title">연락처</h2><p>관심 분야 · AI 게임 기획·개발, 앱 제작, 업무 자동화</p><p>최종학력 · 전문대 졸업</p></div>
+<a href="mailto:damiano1994@naver.com">damiano1994@naver.com</a>
+</section>
+</main>
+</body>
+</html>
